@@ -1,11 +1,11 @@
-import yellow from "../assets/images/yellow.jpg";
-import blue from "../assets/images/blue.jpg";
-import white from "../assets/images/white.jpg";
-import black from "../assets/images/black.jpg";
-import explore1 from "../assets/images/explore1.jpg";
-import explore2 from "../assets/images/explore2.jpg";
-import chip from "../assets/images/chip.jpeg";
-import frame from "../assets/images/frame.png";
+import yellow from "../assets/Images/yellow.jpg";
+import blue from "../assets/Images/blue.jpg";
+import white from "../assets/Images/white.jpg";
+import black from "../assets/Images/black.jpg";
+import explore1 from "../assets/Images/explore1.jpg";
+import explore2 from "../assets/Images/explore2.jpg";
+import chip from "../assets/Images/chip.jpeg";
+import frame from "../assets/Images/frame.png";
 
 export const yellowImg = yellow;
 export const blueImg = blue;

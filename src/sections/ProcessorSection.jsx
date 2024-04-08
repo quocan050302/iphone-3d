@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import styled, { keyframes } from "styled-components";
-import a15 from "../assets/images/A15-Bionic.jpg";
+import a15 from "../assets/Images/A15-Bionic.jpg";
 import gsap from "gsap";
 
 const Section = styled.section`
@@ -62,7 +62,7 @@ const Processor = styled.div`
   transform: translate(-50%, -50%);
   animation: ${glow} 3s ease infinite;
   padding: 0.5rem;
-  z-index:10;
+  z-index: 10;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -126,14 +126,13 @@ const HoverReveal = styled.div`
   pointer-events: none;
   transition-property: opacity, transform, background-color;
   transition-duration: 300ms;
- /* transform: translate3d(0) !important */
+  /* transform: translate3d(0) !important */
   &:hover {
     opacity: 1;
   }
 `;
 
 const ProcessorSection = () => {
-
   const revealRef = useRef(null);
   const component = useRef(null);
   const itemsRef = useRef(null);
@@ -167,11 +166,11 @@ const ProcessorSection = () => {
       const mousePos = { x: e.clientX, y: e.clientY + window.scrollY };
       // Calculate speed and direction
       const speed = Math.sqrt(Math.pow(mousePos.x - lastMousePos.current.x, 2));
-  
+
       // Animate the image holder
       const maxY = window.scrollY + window.innerHeight - 350;
       const maxX = window.innerWidth - 250;
-      
+
       gsap.to(revealRef.current, {
         x: gsap.utils.clamp(0, maxX, mousePos.x - 110),
         y: gsap.utils.clamp(0, maxY, mousePos.y - 160),
@@ -185,12 +184,12 @@ const ProcessorSection = () => {
         ease: "power3.out",
         duration: 0.4,
       });
-  
+
       lastMousePos.current = mousePos;
     };
-  
+
     window.addEventListener("mousemove", handleMouseMove);
-  
+
     return () => {
       window.removeEventListener("mousemove", handleMouseMove);
     };
@@ -206,25 +205,28 @@ const ProcessorSection = () => {
   };
 
   useEffect(() => {
-    gsap.from('#chip', {
+    gsap.from("#chip", {
       scrollTrigger: {
-        trigger: '#chip',
-        start: '20% bottom'
+        trigger: "#chip",
+        start: "20% bottom",
       },
       opacity: 0,
       scale: 2,
       duration: 2,
-      ease: 'power2.inOut'
-    })
-
-    
+      ease: "power2.inOut",
+    });
   }, []);
 
   return (
     <Section ref={component}>
       <Title>Fastest Processor</Title>
       <Processor id="chip" onMouseLeave={onMouseLeave}>
-        <img src={a15} alt="A15 processor" onMouseEnter={onMouseEnter} ref={itemsRef} />
+        <img
+          src={a15}
+          alt="A15 processor"
+          onMouseEnter={onMouseEnter}
+          ref={itemsRef}
+        />
       </Processor>
       <Text>
         <span>
@@ -240,12 +242,11 @@ const ProcessorSection = () => {
         </span>
       </Text>
       <HoverReveal
-          style={{
-            backgroundImage: `url(${a15})`,
-          }}
-          ref={revealRef}
-        >
-      </HoverReveal>
+        style={{
+          backgroundImage: `url(${a15})`,
+        }}
+        ref={revealRef}
+      ></HoverReveal>
     </Section>
   );
 };

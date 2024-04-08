@@ -23,7 +23,7 @@ const PhoneModel = () => {
         <ambientLight intensity={1.25} />
         <directionalLight intensity={0.4} />
         <Suspense fallback={null}>
-        {/* <Lights /> */}
+        {/* <Lights /> */}  
 
           <Model />
         </Suspense>
