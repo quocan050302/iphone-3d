@@ -1,10 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import { Canvas } from "@react-three/fiber";
-import { AdaptiveDpr, AdaptiveEvents, Environment } from "@react-three/drei";
+import { AdaptiveDpr, AdaptiveEvents } from "@react-three/drei";
 import Model from "../components/Scene";
 import { Suspense } from "react";
-import Lights from "./Lights";
 
 const Container = styled.div`
   width: 100vw;
@@ -23,14 +22,10 @@ const PhoneModel = () => {
         <ambientLight intensity={1.25} />
         <directionalLight intensity={0.4} />
         <Suspense fallback={null}>
-        {/* <Lights /> */}  
-
           <Model />
         </Suspense>
-        {/* <Environment preset="night" /> */}
         <AdaptiveDpr pixelated />
         <AdaptiveEvents />
-        {/* <OrbitControls /> */}
       </Canvas>
     </Container>
   );

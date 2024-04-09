@@ -54,7 +54,6 @@ const TextContainer = styled.p`
 const TextContainer2 = styled.p`
   width: 100%;
   height: 50vh;
-
   display: flex;
   flex-direction: column;
   justify-content: center;

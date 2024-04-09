@@ -15,11 +15,10 @@ export default function Model2({ ...props }) {
   const { nodes, materials } = useGLTF("/scene.gltf");
 
   let camera = useThree((state) => state.camera);
-
+  console.log(camera);
   useLayoutEffect(() => {
-    camera.position.set(-0.1,0.4,5);
+    camera.position.set(-0.1, 0.4, 5);
     materials.Body.color.set("#9BB5CE");
-        
   }, []);
 
   return (

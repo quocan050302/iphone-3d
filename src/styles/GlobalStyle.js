@@ -2,14 +2,12 @@ import { createGlobalStyle } from "styled-components";
 import fontLight from "../assets/fonts/SourceSansPro-Light.ttf";
 import fontRegular from "../assets/fonts/SourceSansPro-Regular.ttf";
 
-
-
 export const GlobalStyle = createGlobalStyle`
 
 *,*::before,*::after{
     margin: 0;
     padding: 0;
-    ${'' /* outline: 1px solid red !important; */}
+    ${"" /* outline: 1px solid red !important; */}
 }
 
 h1,h2,h3,h4,h5,h6{
@@ -67,4 +65,4 @@ body{
 }
 
 
-`
+`;

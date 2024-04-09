@@ -13,6 +13,7 @@ import PricingSection from "./sections/PricingSection";
 import { ColorContextProvider } from "./context/ColorContext";
 import ReplaceIphone from "./sections/ReplaceIphone";
 import { Shapes } from "./sections/Shapes";
+import TestSpline from "./sections/TestSpline";
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
         {/* <PricingSection /> */}
       </ColorContextProvider>
       <ReplaceIphone/>
+      <TestSpline/>
       {/* <Shapes/> */}
     </>
   );
